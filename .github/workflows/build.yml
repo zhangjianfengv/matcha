@@ -51,6 +51,7 @@ jobs:
       run: |
         $secret_content = [System.Convert]::FromBase64String("${{ secrets.CONSTANT_SECRET_LOCAL }}")
         [IO.File]::WriteAllBytes("${{ env.Secret_Path }}", $secret_content)
+        Get-Content -Path ${{ env.Secret_Path }}
 
     - name: Build
       run: msbuild $env:Solution_Name /p:Configuration=$env:Configuration
