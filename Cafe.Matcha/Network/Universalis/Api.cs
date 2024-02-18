@@ -10,7 +10,7 @@ namespace Cafe.Matcha.Network.Universalis
 
     internal class Api
     {
-        private const string ApiBase = "https://universalis.app";
+        private const string ApiBase = "https://ff14pvp.top";
 
         private readonly PacketProcessor _packetProcessor;
         private readonly string _apiKey;
