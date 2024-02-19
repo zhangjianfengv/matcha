@@ -1,16 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
+using Cafe.Matcha.Constant;
+using Cafe.Matcha.Utils;
+using Newtonsoft.Json;
+
 namespace Cafe.Matcha.Network.Universalis
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
-    using System.Threading.Tasks;
-    using Cafe.Matcha.Utils;
-    using Newtonsoft.Json;
-
     internal class Api
     {
-        private const string ApiBase = "https://ff14pvp.top/ffbusiness/matcha";
+        private const string ApiBase = "https://ff14pvp.top/ffbusiness/currentData/matcha";
 
         private readonly PacketProcessor _packetProcessor;
         private readonly string _apiKey;
@@ -134,9 +135,9 @@ namespace Cafe.Matcha.Network.Universalis
             }
             catch (Exception e)
             {
-                Log.Error(Constant.LogType.Universalis, $"获取物价信息失败 {e.Message}");
+                Log.Error(LogType.Universalis, $"获取物价信息失败 {e.Message}");
 #if DEBUG
-                Log.Debug(Constant.LogType.Universalis, e.StackTrace);
+                Log.Debug(LogType.Universalis, e.StackTrace);
 #endif
             }
 
