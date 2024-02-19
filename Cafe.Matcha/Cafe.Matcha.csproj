@@ -25,6 +25,8 @@
         <NuGetPackageImportStamp>
         </NuGetPackageImportStamp>
         <Obfuscate>true</Obfuscate>
+<!--        <SignAssembly>true</SignAssembly>-->
+<!--        <AssemblyOriginatorKeyFile>D:\cert\keypair.snk</AssemblyOriginatorKeyFile>-->
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <DebugSymbols>true</DebugSymbols>
